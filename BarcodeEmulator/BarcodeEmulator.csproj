@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net472</TargetFramework>
-    <LangVersion>7.3</LangVersion>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Barcode-Scanner.ico</ApplicationIcon>
 
@@ -14,9 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.2">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="ZXing.Net" Version="0.16.8">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -37,7 +36,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <Target Name="CustomAfterTargetsBuild" AfterTargets="Build">
+  <!--<Target Name="CustomAfterTargetsBuild" AfterTargets="Build">
 
 
     <ItemGroup>
@@ -46,10 +45,8 @@
       <InputAssemblies Include="$(OutputPath)\zxing.presentation.dll" />
     </ItemGroup>
 
-    <!-- InternalizeExclude="@(DoNotInternalizeAssemblies)" -->
-    <ILRepack Parallel="true" Internalize="true"
-              LibraryPath="$(OutputPath)" InputAssemblies="@(InputAssemblies)" TargetKind="Exe"
-              OutputFile="$(OutputPath)\$(AssemblyName).exe" />
+    --><!-- InternalizeExclude="@(DoNotInternalizeAssemblies)" --><!--
+    <ILRepack Parallel="true" Internalize="true" LibraryPath="$(OutputPath)" InputAssemblies="@(InputAssemblies)" TargetKind="Exe" OutputFile="$(OutputPath)\$(AssemblyName).exe" />
   </Target>
   <Target Name="CleanBuild" AfterTargets="CustomAfterTargetsBuild">
 
@@ -64,7 +61,7 @@
       <Output TaskParameter="DeletedFiles" ItemName="FilesDeleted" />
     </Delete>
 
-  </Target>
+  </Target>-->
 
 
 </Project>

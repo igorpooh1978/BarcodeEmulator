@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
@@ -94,6 +95,10 @@ namespace BarcodeEmulator
                 source = new BitmapLuminanceSource(image);
                 BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
                 Result result = new MultiFormatReader().decode(bitmap);
+
+
+
+
                 if (result != null)
                 {
                     textBox1.Text = result.Text;
