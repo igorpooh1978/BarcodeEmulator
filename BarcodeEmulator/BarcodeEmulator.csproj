@@ -36,6 +36,10 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <Target Name="MakeMyDir" AfterTargets="Build">
+    <MakeDir Directories="$(OutDir)AppPackages" />
+  </Target>
+
   <!--<Target Name="CustomAfterTargetsBuild" AfterTargets="Build">
 
 
