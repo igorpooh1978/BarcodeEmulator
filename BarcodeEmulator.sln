@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarcodeEmulator", "BarcodeEmulator\BarcodeEmulator.csproj", "{0BA5288F-9C1E-4CAC-85E7-61BE85C92F35}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{517DC844-297E-41B1-B915-E9EA37E47CAE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppPackages", "AppPackages", "{517DC844-297E-41B1-B915-E9EA37E47CAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
